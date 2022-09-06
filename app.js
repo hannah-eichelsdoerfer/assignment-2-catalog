@@ -23,7 +23,7 @@ progressBarElements.forEach((link, index) => {
   link.addEventListener("click", (event) => {
     resetActiveClasses();
     event.preventDefault();
-    const sectionNumber = index + 1;
+    const sectionNumber = index;
     const targetSection = document.getElementById(sectionNumber);
     targetSection.scrollIntoView({ behavior: "smooth" });
   });

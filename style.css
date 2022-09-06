@@ -18,6 +18,7 @@ body {
   overscroll-behavior-y: none;
   background-color: darkslategrey;
   color: white;
+  text-align: center;
 }
 
 header {
@@ -28,12 +29,17 @@ header {
 
 header h1 {
   margin: 0;
+  font-size: 6rem;
+  letter-spacing: 2px;
 }
 
 header nav {
   display: flex;
+  flex-direction: column;
   column-gap: 3rem;
   justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
 }
 
 header nav a {
@@ -42,11 +48,11 @@ header nav a {
   padding: 1rem 2rem;
 }
 
-header,
+/* header,
 h2,
 footer {
   text-align: center;
-}
+} */
 
 main {
   margin: 0 auto;
@@ -91,7 +97,7 @@ main {
   background-color: #fff;
   will-change: transform;
   /* transition: all 0.2s ease-out; */
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 
 .progress-dot:hover,
@@ -99,14 +105,24 @@ main {
   /* background-color: rgb(203, 46, 46); */
   transform: scale(1.5);
   opacity: 1;
+  cursor: pointer;
 }
 
 section {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-around;
   align-items: center;
+  flex-direction: column-reverse;
+}
+
+section > img {
+  width: 500px;
+  height: 500px;
+  /* object-fit: cover; */
+  object-fit: contain;
 }
 
 footer {
@@ -120,8 +136,19 @@ footer {
 }
 
 @media (min-width: 768px) {
+  header nav {
+    flex-direction: row;
+  }
   main {
     /* width: 80%; */
+  }
+
+  section {
+    flex-direction: row;
+  }
+
+  section:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .container {
