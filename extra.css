@@ -1,0 +1,29 @@
+.language-pill {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 9999px;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  /* Mobile first approach, the following will be overwritten in bigger screens */
+  flex-direction: column;
+  align-items: center;
+}
+/* Inside Media Query */
+.container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.external-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
